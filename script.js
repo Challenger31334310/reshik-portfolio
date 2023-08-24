@@ -5,7 +5,7 @@ menuIcon.addEventListener("click", function () {
 
 ScrollReveal({
     distance: "900px", // Remove the semicolon and use a comma instead
-    duration: 1000,
+    duration: 2000,
     delay: 200,
     reset: true,
 });
