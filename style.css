@@ -1,0 +1,274 @@
+/*----CSS FONT APPLY-------*/
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Leckerli+One&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&family=Noto+Sans+Bengali&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,500;1,700&family=Work+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400&display=swap');
+
+
+/*----universal selector-------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+}
+
+
+/*----Root element-------*/
+:root {
+    --background-color: rgba(255, 255, 255, 0.869);
+    --gradient-white-bg: linear-gradient(0deg, #ce8839 0%, #edf4fa 51%, #e5eef7 100%);
+    --gradient-color-bg: linear-gradient(180deg, rgba(241, 9, 117, 0.988)0%, rgba(160, 8, 156, 1)51%, rgba(99, 13, 178, 1)100%);
+    --main-color :rgba(245, 10, 206, 0.971);
+    --font-color:gray;
+    --hover-box-shadow:rgba(171, 212, 10, 0.807)0px 10px 20px,
+                       rgba(211, 27, 204, 0.23)0px 6px 6px;
+ --gradient-white-bg2 :linear-gradient(98deg,#e5eef7 0%,#fff 100%);                    
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+body{
+    font-family: 'Poppins', sans-serif; 
+    background: var(--background-color);
+    overflow-x: hidden; 
+}
+header{
+    padding: 15px 8%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:var(--gradient-white-bg) ;
+    z-index: 100;
+    transition: .3s;
+}
+
+header .logo{
+  font-size:1.7rem;
+  font-weight: 700;
+}
+ ul.nav_list{
+    display: flex;
+}
+span{
+    background: var(--gradient-color-bg);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+ .nav_list li{
+   margin: 0 1rem;
+}
+.nav_list li a{
+   display: inline-flex;
+   font-weight: 600;
+ }
+ .nav_list li a:hover,.nav_list li a.active{
+   background: var(--gradient-color-bg);
+   -webkit-background-clip: text;
+   color: transparent;
+  }
+  .btn{
+    background-image: var(--gradient-color-bg);
+    color: #fff;
+    padding: 8px 10px;
+    border-radius: 0.3rem;
+    font-weight: 600;
+    transition: all .3s ease;
+  }
+
+  .btn:hover{
+    box-shadow: var( --hover-box-shadow);
+  }
+  .menu-icon{
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 6px;
+    cursor: pointer;
+   
+  }
+  .right_header{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 0.8rem;
+  }
+ 
+  .menu-icon {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.bar {
+    content: "";
+    display: none;
+    width: 100%;
+    height: 4px;
+    background: black;
+    border-radius: 3px;
+    margin: 4px 0; /* Adjust margin to properly space the lines */
+    transition: 0.4s;
+}
+
+.menu-icon.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-6px, 5px);
+}
+
+.menu-icon.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-7px, -5px);
+}
+
+/*=====================HOME section css====================== */
+section{
+  padding: 90px 8%;
+}
+.home{
+  min-height: 100vh;height: 100%;
+  width: 100%;
+  display: flex;
+  grid-template-columns: repeat(2,1fr);
+  gap: 4rem;
+  align-items: center;
+background: var(--gradient-white-bg2 );
+}
+.img_hero img{
+  width:500px;
+  height: 500px;
+  
+}
+.img_hero{
+  position: relative;
+}
+.hero_info{
+  margin-top: 3rem;
+}
+.hero_info h3{
+  color: var(--font-color);
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+.hero_info h1{
+  font-size: 3.5rem;
+}
+.hero_info p{
+font-size: .9rem;
+color: var(--font-color);
+line-height: 1.5rem;
+}
+.text_animate{
+width: 22.8rem;
+position: relative;
+}
+.text_animate h2{
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: transparent;
+  -webkit-text-stroke: 0.2w #770753;
+  background: var(--gradient-color-bg);
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-position: 0 0;
+  transition: .6s;
+  letter-spacing: 2px;
+  animation: moveText 3s linear infinite;
+  animation-delay: 2s;
+  
+}
+@keyframes moveText{
+  0%, 10%, 100%{
+    background-position: -24rem,0;
+  }
+  65%,85%{
+    background-position: 0rem 0;
+  }
+}
+.btn_box{
+display: flex;
+justify-content: space-between;
+width: 320px;
+margin-top: 1rem;
+
+}
+.btn_box .btn{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap:8px
+}
+.btn.git{
+background: var(--gradient-white-bg);
+padding: 10px;
+border-radius: 5px;
+font-weight: 500;
+color: black;
+box-shadow:var(--hover-box-shadow) ;
+}
+
+.social_icon{
+  display: flex;
+  justify-content: space-between;
+  height: 220px;
+  width: 45px;
+  gap: 1rem;
+}
+.social_icon a{
+  color: var(--main-color);
+font-size:1.6rem;
+background-color:white;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+border-radius: 50%;
+z-index:1;
+transition: .4s;
+width: 42px;
+height: 42px;
+
+}
+.social_icon a:hover{
+  background: var(--gradient-color-bg);
+  color: white;
+}
+.bg_icon{
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.bg_icon span{
+  position:absolute;
+  width: 50px;
+  height: 50px;
+  background: var(--gradient-color-bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: animate 1s linear infinite;
+}
+@media screen and (max-width:576px) {
+  .home{
+   display: flex;
+   flex-direction:column-reverse;
+   width: fit-content;
+   height: auto;
+  }
+  .img_hero{
+    padding-top: 3rem;
+  
+  }
+}
