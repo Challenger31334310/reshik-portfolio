@@ -260,15 +260,34 @@ justify-content: center;
   justify-content: center;
   animation: animate 1s linear infinite;
 }
-@media screen and (max-width:576px) {
-  .home{
-   display: flex;
-   flex-direction:column-reverse;
-   width: fit-content;
-   height: auto;
+@media screen and (max-width: 576px) {
+  .bar {
+    display: block;
   }
-  .img_hero{
-    padding-top: 3rem;
-  
+  .home {
+    display: flex;
+    flex-direction: column-reverse;
+    width: fit-content;
+    height: auto;
   }
+  .nav_list{
+position: absolute;
+top: -1000%;
+left:0%;
+transition: all .3s ease;
+width: 100%;
+text-align: center;
+display: block;
+background: var(--gradient-white-bg);
+display:flex;
+flex-direction: column;
+height: 60vh;
+padding-top: 2rem;
+gap: 1rem;
+
+  }
+  .nav_list.active{
+    top: 100%;
+  }
+
 }

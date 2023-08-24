@@ -1,6 +1,9 @@
 const menuIcon = document.querySelector(".menu-icon");
+const navList = document.querySelector(".nav_list")
 menuIcon.addEventListener("click", function () {
     menuIcon.classList.toggle("active");
+    navList.classList.toggle("active");
+    document.body.classList.toggle("open")
 });
 
 ScrollReveal({
